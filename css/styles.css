@@ -109,13 +109,6 @@ header {
   z-index: 1001;
 }
 
-.ad-banner {
-  display: none;
-  text-align: center;
-  padding: 10px;
-  background-color: #f8cb70;
-}
-
 .stats {
   position: fixed;
   background-color: #fff;
@@ -286,9 +279,16 @@ video {
 }
 
 .ad-banner {
+  height: 0;
+  display: grid;
+  align-items: center;
   text-align: center;
-  padding: 10px;
   background-color: #f8cb70;
+  transition: height 0.7s ease-in-out;
+}
+
+.ad-banner--visible {
+  height: 45px;
 }
 
 .cookie-banner {
