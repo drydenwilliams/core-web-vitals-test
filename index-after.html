@@ -13,15 +13,12 @@ meta description. This will often show up in search results."
     />
     <meta name="robots" content="index, follow" />
 
-    <script
-      defer
-      data-domain="drydenwilliams.github.io/core-web-vitals/index-after.html"
-      src="https://plausible.io/js/script.js"
-    ></script>
-
     <link href="css/styles-after.css" rel="stylesheet" />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"></script>
+    <script
+      fetchpriority="high"
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
+    ></script>
 
     <style type="text/css">
       /* .glider-contain {
@@ -1166,28 +1163,31 @@ meta description. This will often show up in search results."
   </footer>
 </html>
 
-<script>
-  const script = document.createElement("script");
-  script.src =
-    "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js";
-
-  document.body.appendChild(script);
-
-  const gliderScript = document.createElement("script");
-  gliderScript.src = "js/glider.min.js";
-
-  document.body.appendChild(gliderScript);
-
-  const gliderStyles = document.createElement("script");
-  gliderStyles.setAttribute("rel", "stylesheet");
-  gliderStyles.setAttribute("type", "text/css");
-  gliderStyles.src = "css/glider.min.css";
-
-  document.body.appendChild(gliderStyles);
-</script>
+<script
+  fetchpriority="low"
+  defer
+  data-domain="drydenwilliams.github.io/core-web-vitals/index-after.html"
+  src="https://plausible.io/js/script.js"
+></script>
 
 <script>
   window.addEventListener("load", function () {
+    const gliderScript = document.createElement("script");
+    gliderScript.src = "js/glider.min.js";
+    gliderScript.setAttribute("defer", "true");
+    gliderScript.setAttribute("fetchpriority", "low");
+
+    document.body.appendChild(gliderScript);
+
+    const gliderStyles = document.createElement("script");
+    gliderStyles.setAttribute("rel", "stylesheet");
+    gliderStyles.setAttribute("type", "text/css");
+    gliderStyles.setAttribute("defer", "true");
+    gliderStyles.setAttribute("fetchpriority", "low");
+    gliderStyles.src = "css/glider.min.css";
+
+    document.body.appendChild(gliderStyles);
+
     document
       .querySelector(".glider")
       .addEventListener("glider-slide-visible", function (event) {
