@@ -129,11 +129,10 @@ header {
 
 .video-wrapper {
   position: relative;
-  /* margin-top: var(--nav-height); */
+  display: flex;
+  align-items: center;
   flex-direction: row;
   height: calc(100vh - var(--nav-height));
-  align-items: center;
-  display: flex;
   overflow: hidden;
   background-color: rgba(39, 47, 17, 0.7);
 }
@@ -278,18 +277,12 @@ video {
   max-width: 700px;
 }
 
-.ad-banner {
-  height: 0;
-  display: grid;
-  align-items: center;
+/* .ad-banner {
+  display: none;
+  padding: 10px;
   text-align: center;
   background-color: #f8cb70;
-  transition: height 0.7s ease-in-out;
-}
-
-.ad-banner--visible {
-  height: 45px;
-}
+} */
 
 .cookie-banner {
   display: none;

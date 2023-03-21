@@ -52,7 +52,7 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
 
-  <div id="adBanner" class="ad-banner">Lorem Ipsum</div>
+  <div id="adBanner" class="ad-banner"></div>
   <div id="cookieBanner" class="cookie-banner">
     <h2>Lorem Ipsum</h2>
     <p>
@@ -126,15 +126,7 @@
       <div class="Section-module--backgroundVideo">
         <div class="Section-module--video">
           <div class="Video-module--wrapper">
-            <video
-              width="1000"
-              id="video"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="none"
-            >
+            <video id="video" autoplay muted loop playsinline preload="none">
               <source src="videoplayback.mp4" type="video/mp4" />
             </video>
           </div>
@@ -542,19 +534,23 @@
 
       setTimeout(() => {
         $(".section-text").css("top", "calc(50% - 5vh)");
-      }, 1500);
+      }, 2000);
 
       setTimeout(() => {
         const adBannerEl = document.getElementById("cookieBanner");
-
         adBannerEl.style.display = "block";
-      }, 1000);
+      }, 1500);
 
       setTimeout(() => {
         const adBannerEl = document.getElementById("adBanner");
-        adBannerEl.classList.add("ad-banner--visible");
-        // adBannerEl.style.display = "block";
-        // adBannerEl.innerHTML = "Lorem Ipsum";
+        adBannerEl.style.display = "block";
+        adBannerEl.style.backgroundColor = "#f8cb70";
+        adBannerEl.style.textAlign = "center";
+        adBannerEl.style.width = "600px";
+        adBannerEl.style.height = "100px";
+        adBannerEl.style.margin = "30px auto";
+
+        adBannerEl.innerHTML = "Lorem Ipsum";
       }, 500);
     });
   </script>
