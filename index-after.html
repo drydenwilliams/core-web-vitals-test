@@ -13,9 +13,15 @@ meta description. This will often show up in search results."
     />
     <meta name="robots" content="index, follow" />
 
-    <link rel="stylesheet" type="text/css" href="css/glider.min.css" />
+    <script
+      defer
+      data-domain="drydenwilliams.github.io/core-web-vitals"
+      src="https://plausible.io/js/script.js"
+    ></script>
 
     <link href="css/styles-after.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"></script>
 
     <style type="text/css">
       /* .glider-contain {
@@ -365,7 +371,11 @@ meta description. This will often show up in search results."
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">Navbar</a>
+        <a
+          class="navbar-brand"
+          href="https://drydenwilliams.github.io/core-web-vitals/"
+          >Navbar</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -381,12 +391,16 @@ meta description. This will often show up in search results."
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="/core-web-vitals/index-before.html"
+              <a
+                class="nav-link"
+                href="https://drydenwilliams.github.io/core-web-vitals/index-before.html"
                 >Before website</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/core-web-vitals/index-after.html"
+              <a
+                class="nav-link"
+                href="https://drydenwilliams.github.io/core-web-vitals/index-after.html"
                 >After website</a
               >
             </li>
@@ -1152,7 +1166,26 @@ meta description. This will often show up in search results."
   </footer>
 </html>
 
-<script src="js/glider.min.js"></script>
+<script>
+  const script = document.createElement("script");
+  script.src =
+    "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js";
+
+  document.body.appendChild(script);
+
+  const gliderScript = document.createElement("script");
+  gliderScript.src = "js/glider.min.js";
+
+  document.body.appendChild(gliderScript);
+
+  const gliderStyles = document.createElement("script");
+  gliderStyles.setAttribute("rel", "stylesheet");
+  gliderStyles.setAttribute("type", "text/css");
+  gliderStyles.src = "css/glider.min.css";
+
+  document.body.appendChild(gliderStyles);
+</script>
+
 <script>
   window.addEventListener("load", function () {
     document
@@ -1191,12 +1224,4 @@ meta description. This will often show up in search results."
       },
     });
   });
-</script>
-
-<script>
-  const script = document.createElement("script");
-  script.src =
-    "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js";
-  document.body.appendChild(script);
-  // }
 </script>
