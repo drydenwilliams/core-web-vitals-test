@@ -14,11 +14,6 @@ meta description. This will often show up in search results."
     <meta name="robots" content="index, follow" />
 
     <link rel="stylesheet" type="text/css" href="css/styles-after.css" />
-
-    <script
-      fetchpriority="high"
-      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
-    ></script>
   </head>
 
   <div class="ad-banner">Lorem Ipsum</div>
@@ -833,12 +828,13 @@ meta description. This will often show up in search results."
 </html>
 
 <script
-  fetchpriority="low"
   defer
-  src="https://plausible.io/js/script.js"
+  src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
 ></script>
 
-<script fetchpriority="low" defer src="js/glider.min.js"></script>
+<script defer src="https://plausible.io/js/script.js"></script>
+
+<script defer src="js/glider.min.js"></script>
 
 <script>
   window.addEventListener("load", function () {
