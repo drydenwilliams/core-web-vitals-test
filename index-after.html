@@ -14,6 +14,19 @@ meta description. This will often show up in search results."
     <meta name="robots" content="index, follow" />
 
     <link rel="stylesheet" type="text/css" href="css/styles-after.css" />
+
+    <script
+      fetchpriority="high"
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
+    ></script>
+
+    <script
+      fetchpriority="low"
+      defer
+      src="https://plausible.io/js/script.js"
+    ></script>
+
+    <script fetchpriority="low" defer src="js/glider.min.js"></script>
   </head>
 
   <div class="ad-banner">Lorem Ipsum</div>
@@ -79,7 +92,7 @@ meta description. This will often show up in search results."
       <div class="Section-module--backgroundVideo">
         <div class="Section-module--video">
           <div class="Video-module--wrapper">
-            <!-- <video
+            <video
               width="1000"
               height="100vh"
               id="video"
@@ -90,22 +103,32 @@ meta description. This will often show up in search results."
               preload
             >
               <source src="./videoplayback-720-HD-720p.webm" type="video/mp4" />
-            </video> -->
-
-            <iframe
-              title="vimeo-player"
-              src="https://player.vimeo.com/video/811263619?background=1"
-              width="640"
-              height="360"
-              frameborder="0"
-              allow="autoplay; fullscreen"
-              allowfullscreen
-            ></iframe>
+            </video>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <div style="height: 3000px"></div>
+
+  <!-- <img
+    loading="lazy"
+    alt="going on safari in the maasai mara"
+    class="lazyload"
+    data-src="images/jpg/aj-robbie-BuQ1RZckYW4-unsplash.jpg"
+    width="800"
+    height="500"
+  />
+
+  <img
+    srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
+    sizes="(max-width: 600px) 480px, 800px"
+    src="elva-fairy-800w.jpg"
+    alt="Elva dressed as a fairy"
+  />
+
+  <div style="height: 1500px"></div> -->
 
   <section>
     <div class="container">
@@ -836,19 +859,6 @@ meta description. This will often show up in search results."
     </div>
   </footer>
 </html>
-
-<script
-  fetchpriority="high"
-  src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
-></script>
-
-<script
-  fetchpriority="low"
-  defer
-  src="https://plausible.io/js/script.js"
-></script>
-
-<script fetchpriority="low" defer src="js/glider.min.js"></script>
 
 <script>
   window.addEventListener("load", function () {
