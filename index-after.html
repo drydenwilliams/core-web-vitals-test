@@ -13,15 +13,10 @@ meta description. This will often show up in search results."
     />
     <meta name="robots" content="index, follow" />
 
-    <link href="css/styles-after.css" rel="stylesheet" />
-
-    <script
-      fetchpriority="high"
-      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
-    ></script>
+    <link rel="stylesheet" type="text/css" href="css/styles-after.css" />
   </head>
 
-  <div id="adBanner" class="ad-banner"></div>
+  <div class="ad-banner">Lorem Ipsum</div>
   <div id="cookieBanner" class="cookie-banner">
     <h2>Lorem Ipsum</h2>
     <p>
@@ -44,17 +39,6 @@ meta description. This will often show up in search results."
           href="https://drydenwilliams.github.io/core-web-vitals/"
           >Navbar</a
         >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -103,6 +87,7 @@ meta description. This will often show up in search results."
               muted
               loop
               playsinline
+              preload
             >
               <source src="./videoplayback-720-HD-720p.webm" type="video/mp4" />
             </video>
@@ -320,7 +305,7 @@ meta description. This will often show up in search results."
                   class="lazyload"
                   src="images/jpg/pexels-public-domain-pictures-41178.jpg"
                   loading="lazy"
-                  alt="going on safari in the maasai mara"
+                  alt="Going on safari in the Maasai Mara, Kenya"
                   width="800"
                   height="500"
                 />
@@ -843,27 +828,26 @@ meta description. This will often show up in search results."
 </html>
 
 <script
+  fetchpriority="high"
+  src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js"
+></script>
+
+<script
   fetchpriority="low"
   defer
-  data-domain="drydenwilliams.github.io/core-web-vitals/index-after.html"
   src="https://plausible.io/js/script.js"
 ></script>
 
+<script fetchpriority="low" defer src="js/glider.min.js"></script>
+
 <script>
   window.addEventListener("load", function () {
-    const gliderScript = document.createElement("script");
-    gliderScript.src = "js/glider.min.js";
-    gliderScript.setAttribute("defer", "true");
-    gliderScript.setAttribute("fetchpriority", "low");
-
-    document.body.appendChild(gliderScript);
-
-    const gliderStyles = document.createElement("script");
+    const gliderStyles = document.createElement("link");
     gliderStyles.setAttribute("rel", "stylesheet");
     gliderStyles.setAttribute("type", "text/css");
     gliderStyles.setAttribute("defer", "true");
     gliderStyles.setAttribute("fetchpriority", "low");
-    gliderStyles.src = "css/glider.min.css";
+    gliderStyles.setAttribute("href", "css/glider.min.css");
 
     document.body.appendChild(gliderStyles);
 
